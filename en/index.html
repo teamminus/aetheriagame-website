@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Sets default and correct encoding and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title and description -->
+  <title>Play Aetheria</title>
+  <meta name="description" content="Live the full aetherian experience!">
+
+  <!-- SEO meta tags for search engines indexation and score optimisation -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://aetheria.8bit.ca/en/index">
+
+  <!-- Open Graph meta tags for social media sharing -->
+  <meta property="og:title" content="Play Aetheria">
+  <meta property="og:description" content="Live the full aetherian experience!">
+  <meta property="og:url" content="https://aetheria.8bit.ca/en/index">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://aetheria.8bit.ca/assets/images/og-image.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Alternate language versions for SEO and user experience -->
+  <link rel="alternate" hreflang="en" href="https://aetheria.8bit.ca/en/index">
+  <link rel="alternate" hreflang="fr" href="https://aetheria.8bit.ca/fr/index">
+  <link rel="alternate" hreflang="x-default" href="https://aetheria.8bit.ca/en/index">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="/assets/css/en-index.css">
+
+  <link rel="preload" href="/assets/css/global.css" as="style">
+  <link rel="preload" href="/assets/css/index.css" as="style">
+
+  <!-- Scripts -->
+  <script src="/assets/js/color-scheme.js"></script>
+  <script src="/assets/js/scripts.js" defer></script> <!-- deferred to prevent stop because of unparsed elements -->
+
+  <!-- Metadata/copyright information for SEO & web crawlers -->
+  <meta name="author" content="froelen">
+  <meta name="copyright" content="© 2026 Team Minus & Aetherian Project team">
+  <!-- Sets the theme color for browsers that support it (usually mobile) -->
+  <meta name="theme-color" content="#0B5D1E">
+</head>
+
+<body>
+
+  <header id="header">
+    <button id="nav-pane-button" class="nav-button">
+      <svg class="icon icon-menu"
+        onerror="this.onerror=null; this.src='/assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+        alt="Menu">
+        <use href="/assets/images/icons/menu.svg"></use>
+      </svg>
+      <svg class="icon icon-cross"
+        onerror="this.onerror=null; this.src='/assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+        alt="Close menu">
+        <use href="/assets/images/icons/cross.svg"></use>
+      </svg>
+    </button>
+
+    <nav id="nav-pane" class="nav-pane">
+      <ol>
+        <li><a href="#">Home</a></li>
+        <li><a href="#discover">Discover</a></li>
+        <li><a href="#contribute">Join forces</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1>Aetheria, playable.</h1>
+      <div>
+        <button>Follow us</button>
+        <button>Join forces</button>
+      </div>
+    </section>
+    <div id="cta-scroll">
+      <a href="#discover">Scroll to discover more!</a>
+    </div>
+  </main>
+
+  <footer id="discover">
+    <button id="color-scheme-button" class="nav-button">
+      <img id="sun-icon" class="icon color-scheme-icon" src="/assets/images/icons/sun.svg" draggable="false"
+        onerror="this.onerror=null; this.src='/assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+        alt="Toggle color scheme.">
+      <img id="moon-icon" class="icon color-scheme-icon" src="/assets/images/icons/moon.svg" draggable="false"
+        onerror="this.onerror=null; this.src='/assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+        alt="Toggle color scheme.">
+    </button>
+
+    <p id="copyright">© 2026 Team Minus & Aetherian Project team<br><a href="credits.html">Credits</a></p>
+
+    <div id="site-map">
+      <p>
+        <a href="index#about">About</a><br>
+        <a href="mailto:mc.teamminus@gmail.com" target="_blank">Contact</a><br>
+        <a href="https://github.com/teamminus/aetheriagame-website" target="_blank">Repository</a><br>
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
