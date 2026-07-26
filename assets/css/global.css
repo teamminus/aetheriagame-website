@@ -228,6 +228,10 @@ html.dark {
   }
 
   /* FOOTER */
+  #color-scheme-button .icon {
+    filter: invert(1);
+  }
+
   #color-scheme-button::before {
     transform: translateX(var(--icon-size));
   }
