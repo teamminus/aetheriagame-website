@@ -1,0 +1,284 @@
+:root {
+  /* Colors */
+  --white: #FFF;
+  --black: #000;
+  --highlight: #888;
+
+  --light-background: var(--white);
+  --dark-background: var(--black);
+
+  /* Values */
+  --angle: 155deg;
+  --body-margin: 8px;
+  --transition-speed: 300ms;
+  --default-radius: 0px;
+  --body-margin-quarter: calc(var(--body-margin) / 4);
+  --icon-container-height: calc(var(--icon-size) + var(--body-margin)/2);  /* A quarter of --body-margin serves as 'padding' between icon and outline */
+  --icon-size: 32px;
+
+  --content-max-width: 1080px;
+
+  font-size: 16px;
+}
+
+html {
+  max-width: 100vw;
+}
+
+main, footer {
+  position: relative;
+  max-width: var(--content-max-width);
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+a:link {
+  color: var(--highlight);
+}
+
+a:visited{
+  color: var(--highlight)
+}
+
+body {
+  /* Background */
+  background: var(--white);
+  
+  /* Text */
+  font: normal 400 1rem "Firava", sans-serif;
+  color: var(--black);
+
+  /* Placement */  
+  margin: var(--body-margin);
+
+  /* Display */
+  min-height: calc(100dvh - 2*var(--body-margin));
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  transition: color var(--transition-speed), background var(--transition-speed);
+}
+
+.nav-button {
+  background: none;
+  height: var(--icon-container-height);
+  border: solid var(--body-margin-quarter) var(--highlight);
+  padding: 0;
+  transition: transform var(--transition-speed);
+}
+
+.icon {
+  color: var(--black);
+  height: var(--icon-size);
+  width: var(--icon-size);
+  transition: filter var(--transition-speed), var(--transition-speed);
+  user-select: none;
+}
+
+.icon-cross {
+  display: none;
+}
+
+/* HEADER */
+header {
+  --h1-line-height: calc(1.75rem + var(--body-margin));
+  display: flex;
+  transition: var(--transition-speed);
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 36px;
+  z-index: 10;
+  margin-bottom: var(--body-margin);
+}
+
+header.open .icon-menu {
+  display: none;
+}
+
+header.open .icon-cross {
+  display: initial;
+  color: #C3251D !important;
+}
+
+header.open #nav-pane-button {
+  position: fixed; /* Keeps the button at the top of the menu when scrolling */
+  z-index: 11; /* Ensures button is on top of menu */
+}
+
+header.open .nav-pane {
+  right: -8px;
+  z-index: 10;
+}
+
+/*/ Breadcumb navgation /*/
+.breadcrumb-nav, .lang-nav, .nav-pane {
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-pane {
+  --pane-content-width: calc(100vw / 2);
+  --pane-full-width: calc(var(--pane-content-width) + 2*8px + 4px + 8px);
+  position: fixed;
+  top: -8px;
+  right: calc(0px - var(--pane-full-width));
+  background: #FDF8EC; /* Minecraft book page color */
+  border-left: 4px solid #6F462A; /* Minecraft book cover color */
+  margin-left: 8px;
+  padding: calc(2*8px + 36px) 8px;
+  height: 100dvh;
+  width: var(--pane-content-width);
+  transition: right var(--transition-speed);
+}
+
+/*/ Social links /*/
+.social-nav {
+  position: absolute;
+  right: 0;
+  
+  display: flex;
+  align-items: center;
+  gap: var(--body-margin);
+  /* transform: translateY(var(--body-margin-quarter)); */
+  height: var(--icon-container-height);
+}
+
+.social-nav a {
+  height: var(--icon-size);
+  width: var(--icon-size);
+  display: flex;
+  align-items: center;
+}
+
+/* MAIN */
+#home {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100dvh - 2 * var(--body-margin) - 2 * calc(36px + var(--body-margin)));
+}
+
+#cta-scroll {
+  height: 36px;
+  margin: var(--body-margin) 0;
+}
+
+h1 {
+  margin: 0 0 2rem;
+  font: normal 3rem "Gomez Strikes Again! Contrast", serif;
+  text-align: center;
+  line-height: var(--h1-line-height);
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  column-count: 3;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+/*/ Color scheme button /*/
+#color-scheme-button::before {
+  /* Display */
+  content:'';
+  position: absolute;
+  z-index: -1;
+  transform: translateX(calc(0px - var(--icon-size) / 2));
+  transition: transform var(--transition-speed);
+  /*Style */
+  background: #F6A6FC75;
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+/*/ Site map /*/
+#site-map {
+  text-align: right;
+}
+
+/** DARK COLOR SCHEME **/
+html.dark .icon {
+  color: var(--white);
+}
+
+html.dark {
+  body {
+  color: var(--white);
+  background-color: var(--black);
+  }
+
+  /* FOOTER */
+  #color-scheme-button::before {
+    transform: translateX(calc(var(--icon-size) / 2));
+  }
+}
+
+html.dark body {
+  background: var(--black);
+}
+
+html.dark .nav-pane {
+  background: #E3C7B0; /* Default Dark Mode book page color */
+}
+
+@media screen and (min-width: 700px) { 
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    h1 {
+      flex: 1;
+    }
+    }
+
+    .breadcrumb-nav {
+      transform: translateY(calc(0px - var(--icon-container-height) - 4px));
+    }
+
+    .social-nav {
+      position: static;
+    }
+  }
+
+
+
+/* min-width: calc(var(content-max-width) + 300px) */
+@media screen and (min-width: 1380px) {
+  header.open {
+    margin-top: 0;
+  }
+
+  #nav-button-collapse {
+    display: none;
+  }
+
+  .breadcrumb-nav {
+    position: absolute;
+    transform: none;
+    top: 0;
+    left: var(--body-margin);
+    transform: translateX(calc(0px - calc(100vw - var(--content-max-width)) / 2));
+    padding: 0;
+
+    ol {
+      display: initial;
+    }
+  }
+}
