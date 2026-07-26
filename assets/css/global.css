@@ -186,6 +186,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  font-family: 'Gomez Strikes Again!';
 
   p {
     margin: 0;
@@ -193,12 +194,16 @@ footer {
 }
 
 /*/ Color scheme button /*/
+#color-scheme-button {
+  font-size: 0;
+}
+
 #color-scheme-button::before {
   /* Display */
   content:'';
   position: absolute;
   z-index: -1;
-  transform: translateX(calc(0px - var(--icon-size) / 2));
+  /* transform: translateX(calc(0px - var(--icon-size) / 2)); */
   transition: transform var(--transition-speed);
   /*Style */
   background: #F6A6FC75;
@@ -224,7 +229,7 @@ html.dark {
 
   /* FOOTER */
   #color-scheme-button::before {
-    transform: translateX(calc(var(--icon-size) / 2));
+    transform: translateX(var(--icon-size));
   }
 }
 
