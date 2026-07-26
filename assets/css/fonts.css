@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Gomez Strikes Again!';
+  src: url('../fonts/GomezStrikesAgain-Bold.woff2') format('woff2'),
+      url('../fonts/GomezStrikesAgain-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gomez Strikes Again!';
+  src: url('../fonts/GomezStrikesAgain.woff2') format('woff2'),
+      url('../fonts/GomezStrikesAgain.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gomez Strikes Again! Contrast';
+  src: url('../fonts/GomezStrikesAgain-Contrast.woff2') format('woff2'),
+      url('../fonts/GomezStrikesAgain-Contrast.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
