@@ -1,11 +1,8 @@
 # Aetheria Game Website
 
-This repo contains the source files of the website published at the following domains:
+This repo contains the source files of the website published at the domain [aetheria.freeddns.org](https://aetheria.freeddns.org).
 
-- [teamminus.github.io/aetheriagame-website](https://teamminus.github.io/aetheriagame-website)
-- [aetheria.8bit.ca](https://aetheria.8bit.ca)
-
-For more information about this website and the related project, please visit [aetheria.8bit.ca](https://aetheria.8bit.ca).
+For more information about this website and the related project, please visit [aetheria.freeddns.org](https://aetheria.freeddns.org).
 
 Team Minus © 2026, All Rights Reserved (unless otherwise noted)
 
